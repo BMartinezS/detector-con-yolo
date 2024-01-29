@@ -4,10 +4,10 @@ import os
 from multiprocess import Process
 
 # Carga el modelo YOLO
-model = YOLO('yolov8n.pt')  # Asegúrate de que el archivo 'yolov8n.pt' esté en el directorio correcto
+model = YOLO('yolov8n.pt')
 
 def run():
-    capture = cv2.VideoCapture("rtsp://admin:nosekedecir1@192.168.2.116:554/onvif1", cv2.CAP_FFMPEG)
+    capture = cv2.VideoCapture("rtsp://link", cv2.CAP_FFMPEG)
     while True:
         ret, frame = capture.read()
         if not ret:
